@@ -1,0 +1,10 @@
+{
+  "name": "personal",
+  "main": "app.js",
+  "description": "Movie review website",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+  }
+}
