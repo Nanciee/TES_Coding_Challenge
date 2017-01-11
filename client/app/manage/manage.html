@@ -1,4 +1,24 @@
 <div>
+  <div>
+    <div class="first_name" ng-click="ManageVm.changeSort($event)">
+      First Name
+      <span ng-if="ManageVm.sortType[0] === 'first_name'">
+        <span ng-if="ManageVm.sortType[1] === 'ASC'"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+        <span ng-if="ManageVm.sortType[1] === 'DES'"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+      </span>
+    </div>
+
+    <div class="last_name" ng-click="ManageVm.changeSort($event)">
+      Last Name
+      <span ng-if="ManageVm.sortType[0] === 'last_name'">
+        <span ng-if="ManageVm.sortType[1] === 'ASC'"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+        <span ng-if="ManageVm.sortType[1] === 'DES'"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+      </span>
+    </div>
+
+    <div class="email">Email</div>
+  </div>
+
   <div ng-repeat="user in ManageVm.users">
     <div ng-if="!user.clicked" class="first_name">{{user.first_name}}</div>
     <div ng-if="user.clicked" class="first_name"><input type="text" value="{{user.first_name}}" ng-model="user.first_name"></div>
