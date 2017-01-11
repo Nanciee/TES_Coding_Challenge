@@ -1,5 +1,6 @@
 angular.module('TES', [
   'TES.manage',
+  'TES.services',
   'ui.router'
 ])
 .controller('TESController', function() {
@@ -18,5 +19,5 @@ angular.module('TES', [
   $stateProvider.state(manageState);
 
   $urlRouterProvider.otherwise('/manage');
-  
+
 });

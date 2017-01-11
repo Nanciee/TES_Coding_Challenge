@@ -21,6 +21,7 @@ module.exports = function (config) {
 
       // spec files
       'spec/spec.js',
+      'spec/servicesSpec.js',
     ],
 
     // test results reporter to use
