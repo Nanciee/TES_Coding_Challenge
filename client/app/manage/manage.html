@@ -1,9 +1,15 @@
 <div>
   <div ng-repeat="user in ManageVm.users">
-    <div class="first_name">{{user.first_name}}</div>
-    <div class="last_name">{{user.last_name}}</div>
-    <div class="email">{{user.email}}</div>
-    <div class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+    <div ng-if="!user.clicked" class="first_name">{{user.first_name}}</div>
+    <div ng-if="user.clicked" class="first_name"><input type="text" value="{{user.first_name}}" ng-model="user.first_name"></div>
+    
+    <div ng-if="!user.clicked" class="last_name">{{user.last_name}}</div>
+    <div ng-if="user.clicked" class="last_name"><input type="text" value="{{user.last_name}}" ng-model="user.last_name"></div>
+    
+    <div ng-if="!user.clicked" class="email">{{user.email}}</div>
+    <div ng-if="user.clicked" class="email"><input type="text" value="{{user.email}}" ng-model="user.email"></div>
+    
+    <div ng-click="ManageVm.editUser(user)" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></div>
     <div class="delete"><i class="fa fa-times" aria-hidden="true"></i></div>
   </div>
 </div>

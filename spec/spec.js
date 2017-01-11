@@ -19,4 +19,8 @@ describe('TES', function () {
   it('should have a users property on the ManageVm', function () {
     expect(ManageVm.users).to.be.an('array');
   });
+
+  it('should have an editUser function on the ManageVm', function () {
+    expect(ManageVm.editUser).to.be.an('function');
+  });
 });
