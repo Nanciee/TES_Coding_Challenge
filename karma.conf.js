@@ -13,14 +13,14 @@ module.exports = function (config) {
     files: [
       // angular source
       'client/bower_components/angular/angular.js',
-      'client/bower_components/angular-route/angular-route.js',
+      'client/bower_components/angular-ui-router/release/angular-ui-router.min.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
 
       // app code
       'client/app/**/*.js',
 
       // spec files
-      'specs/TESSpec.js',
+      'spec/spec.js',
     ],
 
     // test results reporter to use
