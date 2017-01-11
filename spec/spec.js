@@ -1,5 +1,5 @@
 describe('TES', function () {
-  var $scope, $rootScope, createController;
+  var $scope, $rootScope, createController, ManageVm;
 
   // using angular mocks, we can inject the injector
   // to retrieve our dependencies
@@ -12,17 +12,12 @@ describe('TES', function () {
 
     var $controller = $injector.get('$controller');
 
-    createController = function () {
-      return $controller('ManageController', {
-        $scope: $scope,
-      });
-    };
+    ManageVm = $controller('ManageController', { $scope: $scope });
 
   }));
 
-  it('should have a users property on the $scope', function () {
-    createController();
-    expect($scope.users).to.be.an('object');
+  it('should have a users property on the ManageVm', function () {
+    expect(ManageVm.users).to.be.an('object');
   });
 
 });

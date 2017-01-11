@@ -1,4 +1,5 @@
 angular.module('TES', [
+  'TES.manage',
   'ui.router'
 ])
 .controller('TESController', function() {
@@ -6,15 +7,16 @@ angular.module('TES', [
 
 .config(function($stateProvider, $urlRouterProvider) {
 
-  // var aboutState = {
-  //   name: 'about',
-  //   url: '/about',
-  //   templateUrl: 'app/about/about.html',
-  //   controller: 'AboutController',
-  //   controllerAs: 'AboutVm',
-  // };
+  var manageState = {
+    name: 'manage',
+    url: '/manage',
+    templateUrl: 'app/manage/manage.html',
+    controller: 'ManageController',
+    controllerAs: 'ManageVm',
+  };
 
-  // $stateProvider.state(aboutState);
+  $stateProvider.state(manageState);
 
-  // $urlRouterProvider.otherwise('/about');
+  $urlRouterProvider.otherwise('/manage');
+  
 });
