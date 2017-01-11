@@ -1,5 +1,5 @@
 angular.module('TES.manage', [])
-.controller('ManageController', function($http, services) {
+.controller('ManageController', function(services) {
   var ManageVm = this;
   ManageVm.users = [];
   ManageVm.clickedUser = {};

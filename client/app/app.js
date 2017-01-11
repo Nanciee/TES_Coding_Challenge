@@ -1,5 +1,6 @@
 angular.module('TES', [
   'TES.manage',
+  'TES.user',
   'TES.services',
   'ui.router'
 ])
@@ -16,7 +17,16 @@ angular.module('TES', [
     controllerAs: 'ManageVm',
   };
 
+  var userState = {
+    name: 'user',
+    url: '/user/:id',
+    templateUrl: 'app/user/user.html',
+    controller: 'UserController',
+    controllerAs: 'UserVm',
+  };
+
   $stateProvider.state(manageState);
+  $stateProvider.state(userState);
 
   $urlRouterProvider.otherwise('/manage');
 
