@@ -19,5 +19,4 @@ describe('TES', function () {
   it('should have a users property on the ManageVm', function () {
     expect(ManageVm.users).to.be.an('object');
   });
-
 });
