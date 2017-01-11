@@ -40,6 +40,9 @@ angular.module('TES.manage', [])
     ManageVm.users = services.convertToJSON(users);
     ManageVm.users.shift();
     ManageVm.users.pop();
+    ManageVm.users.forEach(function(user, index) {
+      user.id = index;
+    })
     ManageVm.sortUsers('first_name', 'ASC');
   });
 });
