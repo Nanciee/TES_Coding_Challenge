@@ -15,4 +15,8 @@ angular.module('TES.manage', [])
     ManageVm.clickedUser.clicked = false;
     ManageVm.clickedUser = user;
   }
+
+  ManageVm.deleteUser = function(index) {
+    ManageVm.users.splice(index, 1);
+  }
 });
