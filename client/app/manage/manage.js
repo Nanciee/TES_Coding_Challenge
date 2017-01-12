@@ -7,8 +7,13 @@ angular.module('TES.manage', [])
 
   ManageVm.editUser = function(user) {
     ManageVm.clickedUser.clicked = false;
-    user.clicked = true;
-    ManageVm.clickedUser = user;
+    if(user.id === ManageVm.clickedUser.id) {
+      user.clicked = false;
+      ManageVm.clickedUser = {};
+    } else {
+      user.clicked = true;
+      ManageVm.clickedUser = user;
+    }
   };
 
   ManageVm.deleteUser = function(index) {
