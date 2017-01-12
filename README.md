@@ -11,7 +11,8 @@ From within the root directory:
 ```
 sudo npm install -g bower
 npm install
-client/bower install
+cd client
+bower install
 ```
 
 ### Running Tests
