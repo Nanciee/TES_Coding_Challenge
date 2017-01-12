@@ -1,7 +1,6 @@
 {
-  "name": "personal",
-  "main": "app.js",
-  "description": "Movie review website",
+  "name": "TES",
+  "description": "Coding challenge",
   "license": "MIT",
   "dependencies": {
     "angular-mocks": "^1.6.1",
