@@ -1,5 +1,8 @@
-<div>
-  <div>
+<div class="container">
+  <div class="title">
+    <h1>Manage Users</h1>
+    <p>Here is where you can manage all of the users. You can easily sort first name or last name by clicking on the heading. Click on an user to view their profile detail.</p>
+    <br>
     <div class="first_name" ng-click="ManageVm.changeSort($event)">
       First Name
       <span ng-if="ManageVm.sortType[0] === 'first_name'">
@@ -7,7 +10,6 @@
         <span ng-if="ManageVm.sortType[1] === 'DES'"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
       </span>
     </div>
-
     <div class="last_name" ng-click="ManageVm.changeSort($event)">
       Last Name
       <span ng-if="ManageVm.sortType[0] === 'last_name'">
@@ -17,20 +19,23 @@
     </div>
 
     <div class="email">Email</div>
+    <div class="utility">Edit/Delete</div>
   </div>
 
-  <div ng-repeat="user in ManageVm.users">
-    <a ui-sref="user({id: user.id})">
-      <div ng-if="!user.clicked" class="first_name">{{user.first_name}}</div>
-      <div ng-if="!user.clicked" class="last_name">{{user.last_name}}</div>
-      <div ng-if="!user.clicked" class="email">{{user.email}}</div>
-    </a>
-      
-    <div ng-if="user.clicked" class="first_name"><input type="text" value="{{user.first_name}}" ng-model="user.first_name"></div>
-    <div ng-if="user.clicked" class="last_name"><input type="text" value="{{user.last_name}}" ng-model="user.last_name"></div>
-    <div ng-if="user.clicked" class="email"><input type="text" value="{{user.email}}" ng-model="user.email"></div>
-      
-    <div ng-click="ManageVm.editUser(user)" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></div>
-    <div ng-click="ManageVm.deleteUser($index)" class="delete"><i class="fa fa-times" aria-hidden="true"></i></div>
+  <div class="users">
+    <div ng-repeat="user in ManageVm.users">
+      <a ui-sref="user({id: user.id})">
+        <div ng-if="!user.clicked" class="first_name">{{user.first_name}}</div>
+        <div ng-if="!user.clicked" class="last_name">{{user.last_name}}</div>
+        <div ng-if="!user.clicked" class="email">{{user.email}}</div>
+      </a>
+        
+      <div ng-if="user.clicked" class="first_name"><input type="text" value="{{user.first_name}}" ng-model="user.first_name"></div>
+      <div ng-if="user.clicked" class="last_name"><input type="text" value="{{user.last_name}}" ng-model="user.last_name"></div>
+      <div ng-if="user.clicked" class="email"><input type="text" value="{{user.email}}" ng-model="user.email"></div>
+        
+      <div ng-click="ManageVm.editUser(user)" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+      <div ng-click="ManageVm.deleteUser($index)" class="delete"><i class="fa fa-times" aria-hidden="true"></i></div>
+    </div>
   </div>
 </div>

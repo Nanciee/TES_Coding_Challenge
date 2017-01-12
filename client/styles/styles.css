@@ -1,5 +1,82 @@
-.first_name, .last_name, .email, .edit, .delete {
+body {
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: grey;
+}
+
+.first_name, .last_name, .email, .edit, .delete, .utility{
   position: relative;
   display: inline-block;
-  margin-right: 1em;
 }
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: white;
+  height: 6.5em;
+}
+
+.nav_container {
+  position: relative;
+  width: 90%;
+  min-width: 50em;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 15em;
+}
+
+.manage_link {
+  position: absolute;
+  top: 2em;
+  right: 0;
+  font-size: 1.2em;
+}
+
+.container {
+  padding-top: 6em;
+  padding-bottom: 3em;
+  min-width: 50em;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.first_name, .last_name{
+  min-width: 12em;
+  width: 18.5vw;
+}
+
+.email {
+  min-width: 17em;
+  width: 23vw;
+}
+
+.edit, .delete {
+  margin-left: 1vw;
+}
+
+.title {
+  position: fixed;
+  border-bottom: 0.2em black solid;
+  background-color: white;
+  z-index: 100;
+  width: inherit;
+  min-width: inherit;
+}
+
+.users {
+  padding-top: 12em;
+}
+
