@@ -2,7 +2,6 @@
 
 ## Requirements
 * Node v6.6.0
-* Angular 1
 
 ## Usage
 ### Installing Dependencies
@@ -27,4 +26,4 @@ npm test
 npm start
 ```
 
-Navigate to http://localhost:8080/
+Navigate to <http://localhost:8080>
