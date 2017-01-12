@@ -12,6 +12,15 @@ a:hover {
   color: grey;
 }
 
+input {
+  border: none;
+  border-bottom: black solid 0.1em;
+  border-top: black solid 0.1em;
+  outline: none;
+  font-size: 1em;
+  width: 100%;
+}
+
 .first_name, .last_name, .email, .edit, .delete, .utility{
   position: relative;
   display: inline-block;
@@ -78,5 +87,9 @@ a:hover {
 
 .users {
   padding-top: 12em;
+}
+
+.user {
+  margin-bottom: 0.5em;
 }
 

@@ -23,7 +23,7 @@
   </div>
 
   <div class="users">
-    <div ng-repeat="user in ManageVm.users">
+    <div ng-repeat="user in ManageVm.users" class="user">
       <a ui-sref="user({id: user.id})">
         <div ng-if="!user.clicked" class="first_name">{{user.first_name}}</div>
         <div ng-if="!user.clicked" class="last_name">{{user.last_name}}</div>
